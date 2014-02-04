@@ -12,12 +12,12 @@ var user = flag.String("user", "", "HDFS user.")
 func main() {
 	flag.Parse()
 
-	fs, err := gofs.NewFileSystem(gofs.Configuration{Addr: *nn, User: *user})
+	fs, err := gowfs.NewFileSystem(gowfs.Configuration{Addr: *nn, User: *user})
 	if err != nil{
 		log.Fatal(err)
 	}
 
-	checksum, err := fs.GetFileChecksum(gofs.Path{Path: *path})
+	checksum, err := fs.GetFileChecksum(gowfs.Path{Path: *path})
 	if err != nil {
 		log.Fatal(err)
 	}
