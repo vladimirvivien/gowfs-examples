@@ -1,0 +1,5 @@
+Gowfs-Examples
+--------------
+A collection of sample code using gowfs client.
+
+- hfstat: prints the flile status.
